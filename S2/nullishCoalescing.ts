@@ -3,6 +3,6 @@
 
 //Say a user does not supply a value in an input field.
 let input = null;
-//Say our const depends on the input.Depending if the input value is null or not, we want to assign
+//Say our const depends on the input. Depending if the input value is null or not, we want to assign
 //a different value to our constant.
 const didProvideInput: string | boolean = input ?? false;

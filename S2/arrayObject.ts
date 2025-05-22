@@ -1,6 +1,7 @@
-let hobbies: string[] = ["Sports", "Cooking"]; //: string[] is not needed, yet is shown for learning purposes.
-
-//hobbies.push(10); //TS infers the type of hobbies is an array of strings, i.e., string[]; hence, the error.
+//: string[] is not needed, yet is shown for learning purposes.
+let hobbies: string[] = ["Sports", "Cooking"];
+//hobbies.push(10); //TS infers the type of hobbies is an array of strings, i.e., string[]; hence,
+//the error.
 
 //let users: (string | number)[];
 let users: Array<string | number>; //Generic type, alternative to the above assignment.
