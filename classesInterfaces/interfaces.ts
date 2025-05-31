@@ -22,7 +22,7 @@ interface, we use the TS exclusive implements keyword. To implement multiple int
 we can give a list of interfaces, sepreated with a comma. E.g., ABC1, ABC2, ... ABCn. This forces a
 class to have certain shape and incorporate certain logic. Notice the first parameter in the
 constructor has a property not found in the interface. This is okay, we can add additional fields to
-our class. What is important is that the class must have that which it implements.
+our class. What is important is that the class must have interface(s) which it implements.
 */
 class AuthenticatableUser implements Authenticatable {
   constructor(

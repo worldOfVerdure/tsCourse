@@ -48,7 +48,7 @@ console.log(andrew.fullName);
 class Employee extends AdvUser {
   constructor(public jobTitle: string) {
     super();
-    //This is also possible to do withing the constructor of the exenteding class
+    //This is also possible to do within the constructor of the exenteding class
     //super.firstName = "Andrew"; 
   }
 
