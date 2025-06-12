@@ -5,7 +5,7 @@
 // new User();
 
 /*
-  No in JS, declaring the class properties is not necessary. So below, we will see a shortcut in TS
+  Now in JS, declaring the class properties is not necessary. So below, we will see a shortcut in TS
   to reduce the amount of code we need to write.
 */
 // class User {
