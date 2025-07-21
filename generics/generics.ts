@@ -25,7 +25,7 @@ We can use the generic type to make our object more flexible.
 
 /*
   Here we are defining our custom type. Before, we used Array<string> where both Array and string
-  are concrete types. Below, we are defining our own custom types. So we use a  type variable, T.
+  are concrete types. Below, we are defining our own custom types. So we use a type variable, T.
   We can make this placeholder identifier anything. Multiple placeholders can be accepted as a comma
   separated list. Notice where we use the generic type definition that we now supply the concrete
   type.
@@ -78,7 +78,7 @@ function mergeMore<T, U>(a:T, b:U) {
 // console.log(mergedObj); //Returns an empty object.
 
 // function mergeObj<T extends object>(a: T, b: T) {
-//   return {...a, ...b};
+//   return {...a, ...b}; // {value_1: 8, value_2: 4}
 // }
 
 // const mergedObj = mergeObj({value_1: 8}, {value_2: 4});
@@ -86,14 +86,25 @@ function mergeMore<T, U>(a:T, b:U) {
 
 //In this example, both object shapes are different.
 
-function mergeObj<T extends object, U extends Object>(a: T, b: U) {
+interface Name {
+  name: string;
+}
+
+interface Age {
+  age: number;
+}
+
+type Person = Name & Age;
+
+function mergeObj<T extends Name, U extends Age>(a: T, b: U): Person {
   return {...a, ...b};
 }
 /*
   The typeof mergedObj is both propery names with them being allowed to be undefined.
 */
-const mergedObj = mergeObj({name: "Andrew"}, {age: 32});
-console.log(mergedObj);
+const PERSON = mergeObj({name: "Andrew"}, {age: 32});
+console.log(PERSON);
+console.log(typeof PERSON);
 
 //Generic Classes
 // clas User { //A union type could work, but could end up very long.

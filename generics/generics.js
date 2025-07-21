@@ -29,27 +29,15 @@ const ids = merge(1, 2);
 function mergeMore(a, b) {
     return [a, b];
 }
-//console.log(mergeMore(84, "Andrew"));
-/* Adding Constraints with Extends keyword. */
-// function mergeObj(a: any, b: any) {
-//   return {...a, ...b};
-// }
-// const mergedObj = mergeObj(1, 2);
-// console.log(mergedObj); //Returns an empty object.
-// function mergeObj<T extends object>(a: T, b: T) {
-//   return {...a, ...b};
-// }
-// const mergedObj = mergeObj({value_1: 8}, {value_2: 4});
-// console.log(mergedObj);
-//In this example, both object shapes are different.
 function mergeObj(a, b) {
     return { ...a, ...b };
 }
 /*
   The typeof mergedObj is both propery names with them being allowed to be undefined.
 */
-const mergedObj = mergeObj({ name: "Andrew" }, { age: 32 });
-console.log(mergedObj);
+const PERSON = mergeObj({ name: "Andrew" }, { age: 32 });
+console.log(PERSON);
+console.log(typeof PERSON);
 //Generic Classes
 // clas User { //A union type could work, but could end up very long.
 //   constructor(public id: string | number | object) {}
